@@ -14,7 +14,7 @@
                 unpackPhase = ":";
 
                 buildPhase = ''
-                  echo "Just building some things, don't mind me"
+                  echo "Just building some things, don't mind me. Something additional to say ..."
                   cat > an-executable <<EOF
                   echo "Hello from an executable!"
                   EOF
@@ -24,7 +24,7 @@
                 checkPhase = ''
                   echo "Looking around to see if anything is amiss.."
                   OUTPUT=$(./an-executable)
-                  if [ "$OUTPUT" != "Hello rom an executable!" ]; then
+                  if [ "$OUTPUT" != "Hello from an executable!" ]; then
                     echo "Test failed!"
                     exit 1
                   fi
