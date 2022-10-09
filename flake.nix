@@ -33,6 +33,7 @@
                 installPhase = ''
                   mkdir -p $out/bin
                   cp an-executable $out/bin/
+                  $out/bin/an-executable
                 '';
 
 
